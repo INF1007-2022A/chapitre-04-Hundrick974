@@ -10,10 +10,16 @@ def remove_third_char(string: str) -> str:
     return string[:2] + string[3:]
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
+
     pass
 
 
 def get_number_of_char(string: str, char: str) -> int:
+    compteur = 0
+    for caractere in string:
+        if caractere == char:
+            c += 1
+    return compteur
     pass
 
 
