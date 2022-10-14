@@ -3,29 +3,39 @@
 
 #1. Vérifier si le nombre de caractères d’une chaîne de caractères est pair
 def is_even_len(string: str) -> bool:
-    return len(string) % 2 == 0
+    pair = None
+    if len(string) % 2 == 0:
+        pair = True
+    else:
+        pair = False
+    return pair
 
 #2. Supprimer le 3ème caractère d’une chaîne de caractères
 def remove_third_char(string: str) -> str:
     return string[:2] + string[3:]
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-
-    pass
+    for i in range (len(string)):
+        if string[i] == old_char:
+            string = string[:i] + new_char + string[i+1:]
+    return string
 
 
 def get_number_of_char(string: str, char: str) -> int:
     compteur = 0
     for caractere in string:
         if caractere == char:
-            c += 1
+            compteur += 1
     return compteur
-    pass
-
+    
 
 def get_number_of_words(sentence: str, word: str) -> int:
-    pass
-
+    liste = sentence.split(' ')
+    compteur = 0
+    for i in range(len(liste)):
+        if liste[i] == word:
+            compteur += 1
+    return compteur
 
 def main() -> None:
     chaine = "Bonjour!"
